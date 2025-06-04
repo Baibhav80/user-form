@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Enhanced User Registration Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Include Heroicons CDN -->
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+<body class="flex flex-col min-h-screen bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50">
+
+  <!-- Header -->
+  <header class="bg-black text-white shadow-md">
+    <div class="container mx-auto px-6 py-6">
+      <h1 class="text-4xl font-extrabold tracking-tight flex items-center gap-3">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-pink-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 00-8 0v4H5l7 7 7-7h-3V7z" />
+        </svg>
+        User Registration
+      </h1>
+      <p class="mt-1 text-gray-300 max-w-xl">Fill out the form to create your account. All fields marked with * are required.</p>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="flex-grow container mx-auto px-6 py-10 max-w-4xl">
+    <form class="space-y-10 bg-white rounded-xl shadow-xl p-10" action="#" method="POST" novalidate>
+      
+      <!-- Personal Information -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold border-b border-purple-300 pb-2 mb-6 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+          </svg>
+          Personal Information
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700">Full Name *</label>
+            <input type="text" name="name" id="name" required placeholder="John Doe" autocomplete="name"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="username" class="block text-sm font-medium text-gray-700">Username *</label>
+            <input type="text" name="username" id="username" required placeholder="johndoe123" autocomplete="username"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"/>
+          </div>
+
+          <div>
+            <label for="dob" class="block text-sm font-medium text-gray-700">Date of Birth</label>
+            <input type="date" name="dob" id="dob"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="gender" class="block text-sm font-medium text-gray-700">Gender</label>
+            <select id="gender" name="gender"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+              <option value="" disabled selected>Select your gender</option>
+              <option value="female">Female</option>
+              <option value="male">Male</option>
+              <option value="nonbinary">Non-binary</option>
+              <option value="preferNotToSay">Prefer not to say</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="marital-status" class="block text-sm font-medium text-gray-700">Marital Status</label>
+            <select id="marital-status" name="marital-status"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition">
+              <option value="" disabled selected>Select your marital status</option>
+              <option value="single">Single</option>
+              <option value="married">Married</option>
+              <option value="divorced">Divorced</option>
+              <option value="widowed">Widowed</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="nationality" class="block text-sm font-medium text-gray-700">Nationality</label>
+            <input type="text" name="nationality" id="nationality" placeholder="American"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Information -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold border-b border-purple-300 pb-2 mb-6 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-9 13V5" />
+          </svg>
+          Contact Information
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700">Email Address *</label>
+            <input type="email" name="email" id="email" required placeholder="john@example.com" autocomplete="email"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"/>
+          </div>
+
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+            <input type="tel" name="phone" id="phone" placeholder="+1 555 555 5555" autocomplete="tel"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"/>
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="address" class="block text-sm font-medium text-gray-700">Address</label>
+            <textarea id="address" name="address" rows="3" placeholder="123 Main St, Apt 4B, City, State, Zip"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Social Profiles -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold border-b border-purple-300 pb-2 mb-6 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4"/>
+          </svg>
+          Social & Professional Profiles
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="website" class="block text-sm font-medium text-gray-700">Website or Portfolio URL</label>
+            <input type="url" name="website" id="website" placeholder="https://example.com" autocomplete="url"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="linkedin" class="block text-sm font-medium text-gray-700">LinkedIn Profile URL</label>
+            <input type="url" name="linkedin" id="linkedin" placeholder="https://linkedin.com/in/username" autocomplete="url"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="hobbies" class="block text-sm font-medium text-gray-700">Hobbies</label>
+            <input type="text" name="hobbies" id="hobbies" placeholder="Reading, Hiking, Coding"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div class="md:col-span-2">
+            <label for="bio" class="block text-sm font-medium text-gray-700">Short Bio / Introduction</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us a little about yourself"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition"></textarea>
+          </div>
+        </div>
+      </section>
+
+      <!-- Occupation & Security -->
+      <section class="space-y-6">
+        <h2 class="text-2xl font-semibold border-b border-purple-300 pb-2 mb-6 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-purple-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 11c0 1.1.45 2.1 1.17 2.83a4 4 0 115.66-5.66c-.73.72-1.17 1.72-1.17 2.83zM12 11v1m0 4h.01" />
+          </svg>
+          Occupation & Security
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label for="occupation" class="block text-sm font-medium text-gray-700">Occupation</label>
+            <input type="text" name="occupation" id="occupation" placeholder="Software Engineer"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="password" class="block text-sm font-medium text-gray-700">Password *</label>
+            <input type="password" name="password" id="password" required placeholder="********"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+
+          <div>
+            <label for="confirm-password" class="block text-sm font-medium text-gray-700">Confirm Password *</label>
+            <input type="password" name="confirm-password" id="confirm-password" required placeholder="********"
+              class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm p-3 text-lg placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent transition" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Submit button -->
+      <button
+        type="submit"
+        class="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-extrabold text-xl rounded-xl shadow-lg hover:from-purple-700 hover:to-pink-700 transition-transform transform hover:scale-105 duration-300"
+      >
+        Register
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gradient-to-r from-purple-700 via-indigo-700 to-pink-700 text-white shadow-inner">
+    <div class="container mx-auto px-6 py-4 text-center text-sm font-medium select-none">
+      &copy; 2024 Awesome Company. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Feather icons replacement
+    feather.replace()
+  </script>
+</body>
+</html>
+
+
